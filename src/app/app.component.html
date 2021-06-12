@@ -1,0 +1,33 @@
+<!-- Toolbar -->
+
+<!--<div class="toolbar" role="banner">
+  <img src="/src/app/assets/img/archive.png/">
+  <span>Archive viewer</span>
+</div>-->
+
+<mat-toolbar style="background-color: lightgray;">
+  <button  type="button" mat-button (click)="drawer.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span style="margin-left: 1%;">Archive Viewer</span>
+  <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-drawer-container class="example-container">
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <p>Auto-resizing sidenav</p>
+    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+    <button (click)="showFiller = !showFiller" mat-raised-button>
+      Toggle extra text
+    </button>
+  </mat-drawer>
+<app-parameters style="position:relative; top:50px;"></app-parameters>
+<app-frecuency-table style="position:relative; top:100px;"> </app-frecuency-table>
+</mat-drawer-container>
+<router-outlet></router-outlet>
