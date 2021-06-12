@@ -21,13 +21,14 @@
 
 <mat-drawer-container class="example-container">
   <mat-drawer #drawer class="example-sidenav" mode="side">
-    <p>Auto-resizing sidenav</p>
-    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
-    <button (click)="showFiller = !showFiller" mat-raised-button>
-      Toggle extra text
-    </button>
+    <nav>
+      <ul>
+        <!--<li><a routerLink="/ParametersComponent" routerLinkActive="active">First Component</a></li>-->
+        <li><a routerLink="/FrecuencyTableComponent" routerLinkActive="active">Inicio</a></li>
+      </ul>
+    </nav>
   </mat-drawer>
-<app-parameters style="position:relative; top:50px;"></app-parameters>
-<app-frecuency-table style="position:relative; top:100px;"> </app-frecuency-table>
+  <router-outlet class="centered"></router-outlet>
+  <!--<app-parameters style="position:relative; top:50px;"> </app-parameters>
+  <app-frecuency-table style="position:relative; top:100px;"> </app-frecuency-table>-->
 </mat-drawer-container>
-<router-outlet></router-outlet>

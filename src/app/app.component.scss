@@ -43,5 +43,14 @@
   
   .example-sidenav {
     padding: 20px;
+    width: 20%;
+  }
+
+  .centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
   }
   

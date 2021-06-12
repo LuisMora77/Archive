@@ -4,8 +4,8 @@ export interface PeriodicElement {
   Name: string;
   Frecuency: string;
   Type: string;
-  LastApplication: Date;
-  NextApplication: Date;
+  LastApplication: string;
+  NextApplication: string;
 }
 
 
@@ -18,9 +18,9 @@ export class FrecuencyTableComponent implements OnInit {
 
   displayedColumns: string[] = ['Name', 'Frecuency', 'Type', 'LastApplication','NextApplication'];
   //dataSource = ELEMENT_DATA;
-  date1 : Date = new Date('06/08/2021');
+  date1 : string = new Date('06/08/2021').toLocaleDateString('en-US');;
   date2: Date = new Date(this.date1.valueOf());
-  date3: Date = new Date(this.date2.setMonth(this.date2.getMonth()+3));
+  date3: string = new Date(this.date2.setMonth(this.date2.getMonth()+3)).toLocaleDateString('en-US');;
 
   dataSource: PeriodicElement[] = [
     {Name: 'Bitácora', Frecuency: 'Trimestral', Type: 'SQL', LastApplication: this.date1 ,NextApplication: this.date3},
