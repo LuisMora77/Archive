@@ -11,12 +11,18 @@ import { FrecuencyTableComponent } from './components/frecuency-table/frecuency-
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { ArchivesTablesComponent } from './components/archives-tables/archives-tables.component';
+import { ViewsSelectionComponent } from './components/views-selection/views-selection.component';
+import {MatRadioModule} from '@angular/material/radio';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ParametersComponent,
-    FrecuencyTableComponent
+    FrecuencyTableComponent,
+    ArchivesTablesComponent,
+    ViewsSelectionComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +32,9 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatTableModule,
     MatToolbarModule,
     MatIconModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatRadioModule,
+    FormsModule
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]
