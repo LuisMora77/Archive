@@ -19,10 +19,20 @@
 
   <mat-drawer #drawer class="example-sidenav" mode="side">
     <nav>
+      <mat-nav-list>
+        <mat-list-item routerLink="/FrecuencyTableComponent" routerLinkActive="active">
+        <mat-icon mat-list-icon>calendar_today</mat-icon>
+        <span class="full-width" >Calendario de Archives</span>
+      </mat-list-item>
+        <mat-list-item routerLink="/ArchivesTablesComponent" routerLinkActive="active">
+        <mat-icon mat-list-icon>table_chart</mat-icon>
+        <span class="full-width" >Tablas y datos</span>
+      </mat-list-item>
+     </mat-nav-list>
       <ul>
         <!--<li><a routerLink="/ParametersComponent" routerLinkActive="active">First Component</a></li>-->
-        <li><a routerLink="/FrecuencyTableComponent" routerLinkActive="active">Inicio</a></li>
-        <li><a routerLink="/ArchivesTablesComponent" routerLinkActive="active">Archives por Fecha</a></li>
+       <!--<li><a routerLink="/FrecuencyTableComponent" routerLinkActive="active">Inicio</a></li>
+        <li><a routerLink="/ArchivesTablesComponent" routerLinkActive="active">Archives por Fecha</a></li>-->
       </ul>
     </nav>
   </mat-drawer>

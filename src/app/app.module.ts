@@ -15,6 +15,9 @@ import { ArchivesTablesComponent } from './components/archives-tables/archives-t
 import { ViewsSelectionComponent } from './components/views-selection/views-selection.component';
 import {MatRadioModule} from '@angular/material/radio';
 import { FormsModule } from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatListModule} from '@angular/material/list';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +37,9 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     MatSidenavModule,
     MatRadioModule,
-    FormsModule
+    FormsModule,
+    MatFormFieldModule,
+    MatListModule
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]
