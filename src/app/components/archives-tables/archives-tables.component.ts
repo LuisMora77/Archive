@@ -17,6 +17,7 @@ export class ArchivesTablesComponent implements OnInit {
   
   dataSource: PeriodicElement[] = [
     {Name: "Bitácora", TableName: "SMMTRANSLOG",RowCount: 3702298..toLocaleString(),Size: 3, ProjectedRows: 2904644..toLocaleString()},
+    {Name: "Bitácora", TableName: "Total",RowCount: 3702298..toLocaleString(),Size: 3, ProjectedRows: 2904644..toLocaleString()},
     
     {Name: "Tareas Por Lotes", TableName: "BATCHJOB",RowCount: 5936..toLocaleString(),Size: 0, ProjectedRows: 3028..toLocaleString()},
     {Name: "Tareas Por Lotes", TableName: "BATCHJOBHISTORY",RowCount: 464924..toLocaleString(),Size: 0, ProjectedRows: 240456..toLocaleString()},
@@ -81,16 +82,14 @@ export class ArchivesTablesComponent implements OnInit {
     console.log(total);
     return total;
   }
-
-  
-
-    receiveMessage($event) {  
+  receiveMessage($event) {  
         this.message = $event  
-    }
+  }
 
-    formatNumber(number: number){
+  formatNumber(number: number){
       return number.toLocaleString();
-    }
+  }
+
 
 
 }
