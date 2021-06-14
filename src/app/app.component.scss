@@ -41,9 +41,10 @@
     justify-content: center;
   }
   
-  .example-sidenav {
+  .sidenav {
     padding: 20px;
     width: 20%;
+    background-color: transparent;
   }
 
   .centered {
@@ -54,3 +55,16 @@
     margin-left: -100px;
   }
   
+  .pokeIcon {
+    background: url('./assets/img/pokeBag.png');
+    width: 25%;
+    background-repeat: no-repeat;
+    background-size: auto;
+    /* Other styles here */
+}
+
+.ProjectTitle{
+  margin-left: 1%;
+  color: black;
+  font-size: xx-large;
+}

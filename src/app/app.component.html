@@ -1,23 +1,22 @@
 
 
-<mat-drawer-container class="example-container">
+<mat-drawer-container class="example-container" style="position: sticky;">
 
   <mat-toolbar style="background-color: transparent;">
     <button  type="button" mat-button (click)="drawer.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" style="    background-color: white; opacity: 0.5;">
       <mat-icon>menu</mat-icon>
     </button>
-    <span style="margin-left: 1%; color: white;">Archive Viewer</span>
+    <span class="ProjectTitle">Archive Viewer</span>
     <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      <mat-icon>share</mat-icon>
-    </button>
   </mat-toolbar>
 
 
-  <mat-drawer #drawer class="example-sidenav" mode="side">
+  <mat-drawer #drawer class="sidenav" mode="side">
+    <div style="height: 10%;display: flex;">
+      <p class='pokeIcon'></p>
+      <p class="full-width" style="margin-top: 4%;font-size: x-large;margin-left: 17%;"><b>Menú</b></p>
+    </div>
+    <hr>
     <nav>
       <mat-nav-list>
         <mat-list-item routerLink="/FrecuencyTableComponent" routerLinkActive="active">
