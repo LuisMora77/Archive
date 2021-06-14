@@ -1,0 +1,21 @@
+<div style="margin-top: 5%;">
+    <p style=" position:relative; text-align: -webkit-center;" >
+      <mat-card class="card">
+        <mat-card-header >
+          <div style="width: 100%;">
+          <mat-card-title style="color:black">Vistas</mat-card-title>
+        </div>
+        </mat-card-header>
+        <mat-card-content>
+          
+
+            <mat-radio-group aria-label="Select an option" [(ngModel)]="SelectedView">
+                <mat-radio-button value="1" style="margin-right: 25%;" (click)="sendMessage('1')" class="radioButton">Lista de Archives</mat-radio-button >
+                <mat-radio-button value="2" (click)="sendMessage('2')" class="radioButton">Resumen</mat-radio-button>
+              </mat-radio-group>
+
+
+        </mat-card-content>
+      </mat-card>
+    </p>
+    </div>

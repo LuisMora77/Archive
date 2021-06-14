@@ -1,4 +1,15 @@
-.mat-row:nth-child(2n+1){
+/*.mat-row:nth-child(2n+1){
   background-color: aliceblue;
+}*/
+
+.tableClass{
+    width: 100%;
+    margin-top: 10%;
 }
 
+mat-header-cell,
+mat-header-row,
+.mat-header-cell-def {
+    font-size: 20px;
+    font-weight: bold;
+}

@@ -1,33 +1,42 @@
-<!-- Toolbar -->
 
-<!--<div class="toolbar" role="banner">
-  <img src="/src/app/assets/img/archive.png/">
-  <span>Archive viewer</span>
-</div>-->
-
-<mat-toolbar style="background-color: lightgray;">
-  <button  type="button" mat-button (click)="drawer.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span style="margin-left: 1%;">Archive Viewer</span>
-  <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <mat-icon>share</mat-icon>
-  </button>
-</mat-toolbar>
 
 <mat-drawer-container class="example-container">
-  <mat-drawer #drawer class="example-sidenav" mode="side">
-    <p>Auto-resizing sidenav</p>
-    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
-    <button (click)="showFiller = !showFiller" mat-raised-button>
-      Toggle extra text
+
+  <mat-toolbar style="background-color: transparent;">
+    <button  type="button" mat-button (click)="drawer.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" style="    background-color: white; opacity: 0.5;">
+      <mat-icon>menu</mat-icon>
     </button>
+    <span style="margin-left: 1%; color: white;">Archive Viewer</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+
+
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <nav>
+      <mat-nav-list>
+        <mat-list-item routerLink="/FrecuencyTableComponent" routerLinkActive="active">
+        <mat-icon mat-list-icon>calendar_today</mat-icon>
+        <span class="full-width" >Calendario de Archives</span>
+      </mat-list-item>
+        <mat-list-item routerLink="/ArchivesTablesComponent" routerLinkActive="active">
+        <mat-icon mat-list-icon>table_chart</mat-icon>
+        <span class="full-width" >Tablas y datos</span>
+      </mat-list-item>
+     </mat-nav-list>
+      <ul>
+        <!--<li><a routerLink="/ParametersComponent" routerLinkActive="active">First Component</a></li>-->
+       <!--<li><a routerLink="/FrecuencyTableComponent" routerLinkActive="active">Inicio</a></li>
+        <li><a routerLink="/ArchivesTablesComponent" routerLinkActive="active">Archives por Fecha</a></li>-->
+      </ul>
+    </nav>
   </mat-drawer>
-<app-parameters style="position:relative; top:50px;"></app-parameters>
-<app-frecuency-table style="position:relative; top:100px;"> </app-frecuency-table>
+  <router-outlet class="centered"></router-outlet>
+  <!--<app-parameters style="position:relative; top:50px;"> </app-parameters>
+  <app-frecuency-table style="position:relative; top:100px;"> </app-frecuency-table>-->
 </mat-drawer-container>
-<router-outlet></router-outlet>
