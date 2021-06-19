@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/Archivess",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
